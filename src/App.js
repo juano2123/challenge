@@ -1,12 +1,19 @@
-import React from 'react';
+import "./App.css";
+import "./index.js"
+import {useCounter} from "./useCounter"
 
-function FirstApp() {
+const App = () => {
+ 
+  const {counter,handleSubtract,addubtract,handleReset}= useCounter()
+
   return (
     <div>
-      <h1>My First App</h1>
-      <span>10</span>
-    </div>
+      <h1>Counter: {counter}</h1>
+      <button onClick={handleSubtract}>Subtract</button>
+      <button onClick={handleReset}>Reset</button>
+      <button onClick={addubtract}>add</button>    
+      </div>
   );
-}
+};
 
-export default FirstApp
+export default App;
