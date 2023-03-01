@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { AddCategory} from "./components/AddCategory";
+import { AddCategory } from "./components/AddCategory";
 import { Gift } from "./components/Gift";
 
-
 export const Hooks = () => {
-  const [categories, setCategories] = useState(["Zodiac"]);
+  const [categories, setCategories] = useState([""]);
 
   const onAddCategory = (category) => {
     setCategories((list) => [...list, category]);
